@@ -1,0 +1,17 @@
+.borde_redondeado {
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 20px;
+}
+
+h5 {
+    color: solid green;
+}
+
+.marginL {
+    margin-left: 100px;
+}
+
+.bodega_color {
+    color: solid green;
+}
