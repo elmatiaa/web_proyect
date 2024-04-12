@@ -16,3 +16,12 @@ if (document.getElementById('mini_producto')) {
     }
     document.getElementById('mini_producto').outerHTML = tarjetas;
 }
+
+if (document.getElementById('pie')) {
+    fetch('pie_pagina.html').then(response => {
+        return response.text();
+    }).then(htmlContent => {
+        document.getElementById('pie').innerHTML = htmlContent;
+        window.scrollTo(0, 0);
+    });
+};
