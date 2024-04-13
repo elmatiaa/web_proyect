@@ -56,3 +56,33 @@ h1 {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+
+/* estilos ingresar kenny */
+
+.form-control:focus {
+  border-color: #80bdff; /* Cambiar color de la línea cuando el campo está enfocado */
+  box-shadow: none; /* Eliminar sombra del enfoque */
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #0080ff; /* Línea debajo del campo */
+  border-radius: 9px;
+}
+
+.form-control::placeholder{
+  text-align: center;
+
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff, #ffffff); /* Gradiente de colores */
+  color: white; /* Color del texto */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5); /* Sombra */
+  max-width: 500px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px; /* Espaciado interno */
+}
+
