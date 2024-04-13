@@ -22,3 +22,37 @@ h1{
     /* Cambia la fuente del nav bar por una menos generica */
     font-family: 'Roboto', sans-serif; 
 }
+
+.ficha_titulo {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.ficha_disponible {
+    font-family: 'Roboto', sans-serif; 
+    margin-left: 15px;
+    color: green;
+}
+
+.ficha_precio {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.ficha_precio_r {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.ficha_style {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+}
+
+.card-img-top-1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
