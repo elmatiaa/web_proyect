@@ -9,10 +9,168 @@
   </head>
   <body>
     <div id="menu_admin"></div>
-    <h1>Usuarios</h1>
-    <h5>Es el mantenedor de usuarios, que implementa el CRUD, para poder: crear, leer, actualizar y eliminar usuarios. 
-      El administrador puede ejecutar el CRUD, sólo para usuarios CLIENTE y ADMINSTRADOR, pero no tiene control sobre los datos del SUPERUSUARIO 
-      (que es el administrador general de todo el sistema).</h5>
+    <br>
+    <div class="container">
+      <section class="text-center">
+        <h1>Administración de Usuarios</h1>
+
+        <div class="container py-4 pt-4">
+          <form class="row g-3 needs-validation" action="" novalidate>
+            <div class="contanier-fluid bg-light py-4 pt-4 ">
+              <div class="row">
+                <!-- campos del registro de usuario -->
+                <div class="col-sm-12 col-md-6">
+                  <div class="mb-3 fw-bold">
+                    <label for="rut" class="for-label">RUT</label>
+                    <input type="text" class="form-control" id="rut" placeholder="Ej: 123456789" required>
+                    <div class="invalid-feedback">Debe llenar el campo rut</div>
+                  </div>
+                  <div class="mb-3 fw-bold">
+                    <label for="nombres" class="for-label">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" placeholder="Ej: Juan Andres" required>
+                    <div class="invalid-feedback">Debe llenar el campo nombres</div>
+                  </div>
+                  <div class="mb-3 fw-bold">
+                    <label for="Apellidos" class="for-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" placeholder="Ej: Perez Lopez" required>
+                    <div class="invalid-feedback">Debe llenar el campo Apellidos</div>
+                  </div>
+                  <div class="mb-3 fw-bold">
+                    <label for="correo" class="for-label">Correo</label>
+                    <input type="text" class="form-control" id="correo" placeholder="Ej: JuanP123@gmail.com" required>
+                    <div id="correoHelp" class="form-text">Nunca compartiremos su correo electronico con nadie más</div>
+                    <div class="invalid-feedback">Debe llenar el campo Correo</div>
+                  </div>
+                  <div class="mb-3 fw-bold">
+                    <label for="Direccion" class="for-label">Dirección</label>
+                    <textarea type="text" class="form-control" id="Direccion" rows="3" placeholder="Ej: Padre Alonso de Ovalle 1586, Santiago, Region Metropolitana" required></textarea>
+                    <div class="invalid-feedback">Debe llenar el campo Direccción</div>
+                  </div>
+                  <div class="mb-3 form-check" >
+                    <input class="form-check-input" type="checkbox" value="" id="subscripcion">
+                    <label class="form-check-label" for="subscripcion">
+                      <strong>
+                        Subscribirme a Xverse
+                      </strong>
+                    </label>
+                    <div id="subscripcionHelp" class="form-text">
+                      Deseo subscribirme a Xverse, por un costo de $5.000 pesos mesuales, 
+                      para recibir correos con ofertas, promociones y eventos exclusivos</div>
+                  </div>
+                  <div class="mb-3 fw-bold">
+                    <label for="generador" class="for-label">Contraseña</label>
+                    <input type="password" class="form-control" id="generador" >
+                    <br>
+                    <button type="submit" class="btn btn-primary boton-pag-pass">Generar Contraseña</button>
+                  </div>
+                  <button type="submit" class="btn btn-primary boton-pag-datos">Guardar</button>
+                  <button type="submit" class="btn btn-primary boton-pag-datos">Nuevo</button>
+                  <button type="reset" class="btn btn-primary boton-pag-datos">Eliminar</button>
+                </div>
+                <!-- fotod de peril -->
+                <div class="col-sm-12 col-md-6">
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="img/7085548f3d0372a08aea0291ddcee895.jpg" alt="" class="foto_img">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="file" class="form-control">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <table class="table table-hover">
+          <thead>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Tipo Usuario</th>
+            <th scope="col">RUT</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Con Subscripción</th>
+            <th scope="col">Imagen</th>
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">
+                <div class="mb-3 form-check" >
+                  <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                  <label class="form-check-label" for="seleccion">
+              </td>
+              <td scope="row">6</td>
+              <td scope="row">Cliente</td>
+              <td scope="row">12.345.678-9</td>
+              <td scope="row">Juan Andres</td>
+              <td scope="row">Perez Lopez</td>
+              <td scope="row">JuanP123@gmail.com</td>
+              <td scope="row">Padre Alonso de Ovalle 1586</td>
+              <td scope="row">Si</td>
+              <td scope="row"> <img src="..." alt=""></td>
+            </tr>
+
+            <tr>
+              <td scope="row">
+                <div class="mb-3 form-check" >
+                  <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                  <label class="form-check-label" for="seleccion">
+              </td>
+              <td scope="row">7</td>
+              <td scope="row">Cliente</td>
+              <td scope="row">11.333.456-K</td>
+              <td scope="row">Pablo Hernesto</td>
+              <td scope="row">Diaz Cortes</td>
+              <td scope="row">p.diaz11@outlook.com</td>
+              <td scope="row">Romero 126</td>
+              <td scope="row">No</td>
+              <td scope="row"> <img src="..." alt=""></td>
+            </tr>
+            <tr>
+              <td scope="row">
+                <div class="mb-3 form-check" >
+                  <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                  <label class="form-check-label" for="seleccion">
+              </td>
+              <td scope="row">8</td>
+              <td scope="row">Administrador</td>
+              <td scope="row">20.222.111-2</td>
+              <td scope="row">Camila Maria</td>
+              <td scope="row">Torres Gonzalez</td>
+              <td scope="row">CamilaTorres@gmail.com</td>
+              <td scope="row">Cueto 102</td>
+              <td scope="row">No</td>
+              <td scope="row"> <img src="..." alt=""></td>
+            </tr>
+            <tr>
+              <td scope="row">
+                <div class="mb-3 form-check" >
+                  <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                  <label class="form-check-label" for="seleccion">
+              </td>
+              <td scope="row">9</td>
+              <td scope="row">Cliente</td>
+              <td scope="row">9.500.123-4</td>
+              <td scope="row">Marcelo </td>
+              <td scope="row">Gomez Espinosa</td>
+              <td scope="row">mar.go9@hotmail.com</td>
+              <td scope="row">San Diego 300</td>
+              <td scope="row">Si</td>
+              <td scope="row"> <img src="..." alt=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
     <div id="pie"></div>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
