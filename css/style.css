@@ -1,58 +1,58 @@
 h5 {
-    color: solid green;
+  color: solid green;
 }
-h1{
-    color: purple
+h1 {
+  color: purple;
 }
 
-.index_oferta{
-    color: red
+.index_oferta {
+  color: red;
 }
-.index_precio{
-    color: purple;
+.index_precio {
+  color: purple;
 }
 
 /* Estilos mati */
 
 .disponible {
-    color: green
+  color: green;
 }
 
 .nav-link {
-    /* Cambia la fuente del nav bar por una menos generica */
-    font-family: 'Roboto', sans-serif; 
+  /* Cambia la fuente del nav bar por una menos generica */
+  font-family: "Roboto", sans-serif;
 }
 
 .ficha_titulo {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 40px;
-    font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .ficha_disponible {
-    font-family: 'Roboto', sans-serif; 
-    margin-left: 15px;
-    color: green;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+  color: green;
 }
 
 .ficha_precio {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 15px;
-    font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+  font-size: 25px;
 }
 
 .ficha_precio_r {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 15px;
-    font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+  font-size: 15px;
 }
 
 .ficha_style {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 15px;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
 }
 
 .card-img-top-1 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
