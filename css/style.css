@@ -1,9 +1,7 @@
 body{
   background-color: rgba(96, 4, 139, 0.822);
 }
-h5 {
-  color: solid green;
-}
+
 h1 {
   color: beige
 }
@@ -14,6 +12,25 @@ h1 {
 .index_precio {
   color: purple;
 }
+.index_bodega{
+  color: rgb(37, 168, 37);
+}
+
+/* para las paginas registro y mis datos */
+.foto_img{
+  max-width: 200px;
+  margin-left: 50px;
+}
+
+input[type="text"], input[type="correo"], input[type="password"], textarea{
+  border-width: 3px !important;
+  font-family: "Roboto", sans-serif;
+
+}
+.boton-pag-datos{
+  width: 120px;
+}
+
 
 /* Estilos mati */
 
