@@ -9,5 +9,16 @@ h1{
     color: red
 }
 .index_precio{
-    color: purple
+    color: purple;
+}
+
+/* Estilos mati */
+
+.disponible {
+    color: green
+}
+
+.nav-link {
+    /* Cambia la fuente del nav bar por una menos generica */
+    font-family: 'Roboto', sans-serif; 
 }
