@@ -20,6 +20,18 @@
                 <p class="ficha_titulo">Administración de usuarios</p>
                 <div class="col-sm-12 col-md-6" style="padding-left: 50px;">
                   <div class="mb-3 fw-bold">
+                    <label for="identiicador" class="for-label">ID</label>
+                    <input type="text" class="form-control" id="identiicador"  required>
+                    <div class="invalid-feedback">Debe llenar el campo ID</div>
+                  </div>
+                  <form>
+                    <label for="cliente">Cliente:</label>
+                    <input type="radio" id="cliente" name="rol" value="cliente">
+                    <label for="administrador">Administrador:</label>
+                    <input type="radio" id="administrador" name="rol" value="administrador">
+                    <br>
+                  </form>
+                  <div class="mb-3 fw-bold">
                     <label for="rut" class="for-label">Rut</label>
                     <input type="text" class="form-control" id="rut" placeholder="Ej: 123456789" required>
                     <div class="invalid-feedback">Debe llenar el campo rut</div>
