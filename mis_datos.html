@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="menu_cli"></div>
+    <div id="menu"></div>
     <div class="container">
       <section>
-        <h1>Mis datos</h1>
-        <br>
+        <br><br>
         <form class="row g-3 needs-validation" action="" novalidate>
-          <div class="contanier-fluid bg-light py-4 pt-4 ">
+          <div class="contanier-fluid bg-white py-4 pt-4" style="border-radius: 10px;">
             <div class="row">
               <!-- campos del registro de usuario -->
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6" style="padding-left: 50px;">
+                <p class="ficha_titulo">Mis Datos</p>
                 <div class="mb-3 fw-bold">
-                  <label for="rut" class="for-label">RUT</label>
+                  <label for="rut" class="for-label">Rut</label>
                   <input type="text" class="form-control" id="rut" placeholder="Ej: 123456789" required>
                   <div class="invalid-feedback">Debe llenar el campo rut</div>
                 </div>
@@ -69,11 +69,11 @@
                 <button type="reset" class="btn btn-primary boton-pag-datos">Limpiar</button>
               </div>
               <!-- fotod de peril -->
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6" style="padding-left: 150px; padding-top: 100px;">
                 <table>
                   <tr>
                     <td>
-                      <img src="img/7085548f3d0372a08aea0291ddcee895.jpg" alt="" class="foto_img">
+                      <img src="img/7085548f3d0372a08aea0291ddcee895.jpg" alt="" class="foto_img" style="padding-left: 50px;">
                     </td>
                   </tr>
                   <tr>
@@ -88,6 +88,7 @@
         </form>
       </section>
     </div>
+    <br><br>
     <div id="pie"></div>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
