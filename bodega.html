@@ -10,70 +10,97 @@
   <body>
     <div id="menu_admin"></div>
     <br><br><br><br>
-    <div class="container d-flex justify-content-center">
-      <div class="card" style="width: 40rem; margin-right: 20px;">
-        <div class="row">
-          <!-- campos del registro de usuario -->
-          <div class="col-sm-12 col-md-6">
-            <div class="mb-3 fw-bold">
-              <p class="ficha_titulo" style="margin-top: 30px; margin-left: 170px;">
-                Bodega
-              </p>
-              <label for="rut" class="for-label" style="margin-left: 60px;">Categoria</label>
-              <div class="dropdown"style="margin-left: 60px;">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                  Seleccione categoria
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+      <div class="container d-flex justify-content-center">
+        <div class="card" style="width: 40rem; margin-right: 20px;">
+          <div class="row">
+            <!-- campos del registro de usuario -->
+            <div class="col-sm-12 col-md-6">
+              <div class="mb-3 fw-bold">
+                <p class="ficha_titulo" style="margin-top: 30px; margin-left: 170px;">
+                  Bodega
+                </p>
+                <label for="rut" class="for-label" style="margin-left: 60px;">Categoria</label>
+                <div class="dropdown"style="margin-left: 60px;">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    Seleccione categoria
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="mb-3 fw-bold">
-              <label for="nombres" class="for-label" style="margin-left: 60px;">Nombre</label>
-              <div class="dropdown" style="margin-left: 60px;">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Seleccione Nombre
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <div class="mb-3 fw-bold">
+                <label for="nombres" class="for-label" style="margin-left: 60px;">Nombre</label>
+                <div class="dropdown" style="margin-left: 60px;">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seleccione Nombre
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="mb-12 fw-bold">
-              <label for="Cantidad" class="for-label" style="margin-left: 60px;">Cantidad</label>
-              <div class="col-10" style="margin-left: 60px;">
-                <input type="text" class="form-control " id="cantidad" placeholder="Ej: 3" required>
+              <div class="mb-12 fw-bold">
+                <label for="Cantidad" class="for-label" style="margin-left: 60px;">Cantidad</label>
+                <div class="col-10" style="margin-left: 60px;">
+                  <input type="text" class="form-control " id="cantidad" placeholder="Ej: 3" required>
+                </div>
+                <div class="invalid-feedback">Debe llenar el campo cantidad</div>
               </div>
-              <div class="invalid-feedback">Debe llenar el campo cantidad</div>
+              <br>
+              <div style="margin-left: 200px;">
+                <button type="button" class="btn btn-primary" >Nuevo</button>
+              </div>
+              
+              
             </div>
-            <br>
-            <div style="margin-left: 200px;">
-              <button type="button" class="btn btn-primary" >Nuevo</button>
+            <div class="col-sm-12 col-md-6">
+                <img src="img/battlefield 2000.webp" width="70%" style="padding-left: 40px; margin-top: 110px;">
+                <div style="margin-top: 64px; margin-bottom: 30px;">
+                  <button type="button" class="btn btn-primary" >Agregar</button>
+                </div>
             </div>
-            
-            
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <img src="img/battlefield 2000.webp" width="70%" style="padding-left: 40px; margin-top: 110px;">
-            <div style="margin-top: 64px; margin-bottom: 30px;">
-              <button type="button" class="btn btn-primary" >Agregar</button>
+            <div style="margin-left: 1px;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Terror</td>
+                    <td>Resident Evil 4</td>
+                    <td>Vendido</td>
+                    <td>Eliminar</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Accion</td>
+                    <td>Titan Fall</td>
+                    <td>Vendido</td>
+                    <td>Eliminar</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-          <div>
-            
+            </div>
           </div>
         </div>
-      </div>
-    </form>
-  </section>
-</div>
+      </form>
+    </section>
+  </div>
 
-    </div>
+      </div>
         
   <br><br><br><br><br>
     <div id="pie"></div>
