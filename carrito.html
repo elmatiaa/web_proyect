@@ -9,8 +9,84 @@
   </head>
   <body>
     <div id="menu_cli"></div>
-    <h1> Mi carrito de compras</h1>
-    <h5>Es el carrito de compra que muestra los productos que el CLIENTE desea comprar.</h5>
+   
+    <div class="py-4"></div>
+
+
+    <div class="card container" style="width: 60rem; ">
+      <div class="card-body">
+        <p class="ficha_titulo" style="margin-left: 250px;">Mi carrito de compras</p>
+        <section class="text-center">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">%Subscriptor</th>
+                <th scope="col">%Oferta</th>
+                <th scope="col">%Dsc total</th>
+                <th scope="col">Descuentos</th>
+                <th scope="col">Precio a pagar</th>
+                <th scope="col">Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">1234</td>
+                <td scope="col">Nintendo Switch</td>
+                <td scope="col">Splatoon 3</td>
+                <td scope="col">$49.000</td>
+                <td scope="col">5%</td>
+                <td scope="col">59%</td>
+                <td scope="col">64%</td>
+                <td scope="col">31.360</td>
+                <td scope="col">$17.640</td>
+                <td scope="col">
+                  <button type="button" href="#" class="btn btn-primary btn-sm">
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-bottom: 20px; padding-right: 20px;">
+          <label for="Precio-sin-iva" style="font-weight: bold;">Precio sin iva: </label>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="Precio-sin-iva" placeholder="$17.640" disabled>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-bottom: 20px; padding-right: 20px;">
+          <label for="Valor-iva" style="font-weight: bold;">Valor iva: </label>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="Valor-iva" placeholder="$3.350" disabled>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-bottom: 20px; padding-right: 20px;">
+          <label for="Total-pagar" style="font-weight: bold;">Total a pagar: </label>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="Total-pagar" placeholder="$20.990" disabled>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-bottom: 20px; padding-right: 20px;">
+          <button class="btn btn-primary me-md-2" type="button">Cancelar Compra</button>
+          <button class="btn btn-primary" type="button">Pagar</button>
+        </div>
+      </div>
+    </div>
+        
+    <div >
+      <br>
+      <a href="juegos.html" style="margin-left: 500px;"> Click aqui para entrar a pagina concurso.</a>
+      <p>
+   </div>
+
+    <div class="pt-5"></div>
     <div id="pie"></div>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
