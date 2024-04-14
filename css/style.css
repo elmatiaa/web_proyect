@@ -16,6 +16,11 @@ h1 {
   color: rgb(37, 168, 37);
 }
 
+.carrito_img{
+  margin-left: 30px;
+  max-width: 50px;
+}
+
 /* para las paginas registro y mis datos */
 .foto_img{
   max-width: 200px;
@@ -102,6 +107,3 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
 }
-
-
-

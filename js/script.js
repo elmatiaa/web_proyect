@@ -7,6 +7,24 @@ if (document.getElementById('menu')) {
     });
 };
 
+if (document.getElementById('menu_cli')) {
+    fetch('menu_cliente.html').then(response => {
+        return response.text();
+    }).then(htmlContent => {
+        document.getElementById('menu_cli').innerHTML = htmlContent;
+        window.scrollTo(0, 0);
+    });
+};
+
+if (document.getElementById('menu_admin')) {
+    fetch('menu_admin.html').then(response => {
+        return response.text();
+    }).then(htmlContent => {
+        document.getElementById('menu_admin').innerHTML = htmlContent;
+        window.scrollTo(0, 0);
+    });
+};
+
 //Duplica elementos
 if (document.getElementById('mini_producto')) {
     var tarjeta = document.getElementById('mini_producto').outerHTML;
