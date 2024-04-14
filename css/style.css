@@ -93,7 +93,7 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
 
 }
 
-.card {
+.card-1 {
   background: linear-gradient(135deg, #ffffff, #ffffff); /* Gradiente de colores */
   color: white; /* Color del texto */
   border-radius: 10px; /* Bordes redondeados */
