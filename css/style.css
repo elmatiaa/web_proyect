@@ -24,6 +24,19 @@ h1 {
   max-width: 50px;
 }
 
+.icono_check{
+  margin-right: 30px;
+  max-width: 50px;
+}
+.icono_espera{
+  margin-right: 30px;
+  max-width: 50px;
+}
+
+.texto_boleta{
+  font-size: 15px;
+}
+
 /* para las paginas registro y mis datos */
 .foto_img{
   max-width: 200px;
