@@ -24,67 +24,65 @@
             <img src="img/logo_xv_lg.png" alt="" style="padding-left: 30px" />
           </div>
 
-          <div class="card-1-1">
-            <div
-              class="card-header"
-              style="
-                color: black;
-                padding-bottom: 25px;
-                font-family: Roboto, sans-serif;
-              "
-            >
-              Iniciar Sesión
-            </div>
-            <div class="card-body">
-              <form>
-                <br /><br />
-                <div class="form-group mx-auto" style="max-width: 300px">
-                  <!-- <label for="cuenta">Cuenta:</label> -->
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cuenta"
-                    name="cuenta"
-                    placeholder="Ingrese su nombre de usuario o  email"
-                  />
-                </div>
-                <br /><br /><br />
-                <div class="form-group mx-auto" style="max-width: 300px">
-                  <!-- <label for="contrasena">Contraseña:</label> -->
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="contrasena"
-                    name="contrasena"
-                    placeholder="Ingrese su contraseña"
-                  />
-                </div>
-                <br /><br /><br /><br />
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-block">
-                    Ingresar
-                  </button>
-                  <div >
-                    <br>
-                    <a href="registro.html"> Registrarme</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="ingresar.html">Olvide mi contraseña</a>
-                </div>
+          <div class="  container">
+            <section>
+              <form class="row g-3 needs-validation" action="" novalidate>
+                <div class="contanier-fluid bg-white py-4 pt-4" style="border-radius: 10px;">
+                  <div class="row">
+                    <p class="ficha_titulo" style="text-align: center; padding-bottom: 20px;">
+                      Iniciar Sesión
+                    </p>
+                    <div style="padding: 60px;">
+                      <div class="mb-5 fw-bold" >
+                        <label for="cuenta" style="text-align: left;"><b>Correo:</b></label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cuenta"
+                          name="cuenta"
+                          placeholder="Ingrese tu correo"
+                        />
+                      </div>
+                      <label for="contrasena" style="text-align: left;"><b>Contraseña:</b></label> 
+                      <div class="mb-5 fw-bold" >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="contrasena"
+                          name="contrasena"
+                          placeholder="Ingrese su contraseña"
+                        />
+                      </div>
+  
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-block">
+                          Ingresar
+                        </button>
+                        <div >
+                          <br>
+                          <a href="registro.html"> Registrarme</a>
+                          &nbsp;&nbsp;&nbsp;&nbsp;
+                          <a href="ingresar.html">Olvide mi contraseña</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
                 </div>
               </form>
-            </div>
+            </section>
           </div>
-                <div >
-                    <br>
+          <div class="py-4 pt-4" style="text-align: center;">
                     <a href="administracion.html"> Click aqui para simular ingreso como administrador</a>
                     <p>
-                    <a href="mis_datos.html">Click aqui para simular ingreso como cliente</a>
+                      <br>
+                    <a href="mis_datos.html" class="py-4 pt-4">Click aqui para simular ingreso como cliente</a>
                     </p>
                 </div>
         </div>
       </div>
     </div>
-    <br /><br /><br /><br /><br />
+ 
 
     <div id="pie"></div>
     <script src="js/script.js"></script>

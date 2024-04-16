@@ -37,6 +37,35 @@ h1 {
   font-size: 15px;
 }
 
+.nosotros{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+.in-flex{
+  flex: 1;
+  padding: 25px;
+  margin: 20px;
+}
+
+.texto_nosotros{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}
+
+.tarjeta_persona{
+  align-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 100px;
+  max-width: max-content;
+}
+
+.form-label-1{
+  font-weight: bold;
+}
+
 /* para las paginas registro y mis datos */
 .foto_img{
   max-width: 200px;
@@ -63,8 +92,13 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
 
 .ficha_titulo {
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
+  margin-left: 15px;
   font-weight: bold;
+}
+
+.ficha_tecnica{
+  color: black;
 }
 
 .ficha_disponible {
@@ -91,8 +125,12 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
 }
 
 .card-img-top-1 {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  width: 400px; 
+  height: auto; 
+  margin: auto;
+  display: block;
+  
+  
 }
 
 
