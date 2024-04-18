@@ -11,26 +11,28 @@
     <div id="menu_admin"></div>
     <br><br>
     <div class="container">
-      <section class="text-center">
+      <section >
         <div class="container py-4 pt-4">
           <form class="row g-3 needs-validation" action="" novalidate>
             <div class="contanier-fluid bg-white py-4 pt-4" style="border-radius: 10px;">
               <div class="row">
                 <!-- campos del registro de usuario -->
-                <p class="ficha_titulo">Administración de usuarios</p>
+                <p class="ficha_titulo " >Administración de usuarios</p>
                 <div class="col-sm-12 col-md-6" style="padding-left: 50px;">
                   <div class="mb-3 fw-bold">
                     <label for="identiicador" class="for-label">ID</label>
                     <input type="text" class="form-control" id="identiicador"  required>
                     <div class="invalid-feedback">Debe llenar el campo ID</div>
                   </div>
-                  <form>
-                    <label for="cliente">Cliente:</label>
-                    <input type="radio" id="cliente" name="rol" value="cliente">
-                    <label for="administrador">Administrador:</label>
-                    <input type="radio" id="administrador" name="rol" value="administrador">
-                    <br>
-                  </form>
+                  <div class="mb-3 fw-bold contanier-fluid text-center">
+                    <form  >
+                      <label for="cliente">Cliente:</label>
+                      <input type="radio" id="cliente" name="rol" value="cliente" >
+                      &nbsp;&nbsp;
+                      <label for="administrador" >Administrador:</label>
+                      <input type="radio" id="administrador" name="rol" value="administrador">
+                    </form>
+                  </div>
                   <div class="mb-3 fw-bold">
                     <label for="rut" class="for-label">Rut</label>
                     <input type="text" class="form-control" id="rut" placeholder="Ej: 123456789" required>
@@ -49,7 +51,6 @@
                   <div class="mb-3 fw-bold">
                     <label for="correo" class="for-label">Correo</label>
                     <input type="text" class="form-control" id="correo" placeholder="Ej: JuanP123@gmail.com" required>
-                    <div id="correoHelp" class="form-text">Nunca compartiremos su correo electronico con nadie más</div>
                     <div class="invalid-feedback">Debe llenar el campo Correo</div>
                   </div>
                   <div class="mb-3 fw-bold">
@@ -71,12 +72,16 @@
                   <div class="mb-3 fw-bold">
                     <label for="generador" class="for-label">Contraseña</label>
                     <input type="password" class="form-control" id="generador" placeholder="">
-                    <br>
-                    <button type="submit" class="btn btn-primary boton-pag-pass">Generar Contraseña</button>
+                    <div class="py-4 mb-3 fw-bold contanier-fluid text-center">
+                      <button type="submit" class="btn btn-primary boton-pag-pass ">Generar Contraseña</button>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary boton-pag-datos">Guardar</button>
-                  <button type="submit" class="btn btn-primary boton-pag-datos">Nuevo</button>
-                  <button type="reset" class="btn btn-primary boton-pag-datos">Eliminar</button>
+                  <div class="mb-3 fw-bold contanier-fluid text-center ">
+                    <button type="submit" class="btn btn-primary boton-pag-datos" style="margin-bottom: 5px;" >Guardar</button>
+                    <button type="submit" class="btn btn-primary boton-pag-datos" style="margin-bottom: 5px;">Nuevo</button>
+                    <button type="reset" class="btn btn-primary boton-pag-datos" style="margin-bottom: 5px;">Eliminar</button>
+
+                  </div>
                 </div>
                 <!-- fotod de peril -->
                 <div class="col-sm-12 col-md-6" style="padding-left: 150px; padding-top: 100px;">
@@ -104,7 +109,7 @@
             <th scope="col">ID</th>
             <th scope="col">Tipo Usuario</th>
             <th scope="col">RUT</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
             <th scope="col">Correo</th>
             <th scope="col">Dirección</th>

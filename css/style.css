@@ -55,11 +55,7 @@ h1 {
 }
 
 .tarjeta_persona{
-  align-content: space-between;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 100px;
-  max-width: max-content;
+  padding: 20px;
 }
 
 .form-label-1{
@@ -125,9 +121,9 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
 }
 
 .card-img-top-1 {
-  width: 400px; 
-  height: auto; 
-  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 380px;
   display: block;
   
   
