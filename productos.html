@@ -11,125 +11,150 @@
     <div id="menu_admin"></div>
     <div class="py-4"></div>
     <br>
+
     <div class="card container">
       <div class="card-body">
         <p class="ficha_titulo text-center py-4 pt-4" >Mantenedor de productos</p>
-        <form class="row g-3 ">
-          <div style="padding-left: 40px;">
-            <div class="col-md-4 py-3">
-              <label for="validationDefault01" class="form-label-1">ID producto</label>
-              <input type="text" class="form-control" id="validationDefault01" value="" required>
+      <section>
+        <br><br>
+        <form class="row g-3 needs-validation" action="" novalidate>
+          <div class="contanier-fluid bg-white py-4 pt-4" style="border-radius: 10px;">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6" style="padding-top: 0; padding-left: 50px;">
+ 
+                <div  class="mb-3 fw-bold py-3" >
+                  <label for="id_producto" class="form-label-1">ID producto</label>
+                  <input type="text" class="form-control" id="id_producto" value="" required>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="validationDefault04" class="form-label-1">Categoria</label>
+                  <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value=""></option>
+                    <option>Nintendo 64</option>
+                    <option>Juego Xbox</option>
+                    <option>PS4</option>
+                  </select>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="nombre_producto" class="form-label-1">Nombre Producto</label>
+                  <input type="text" class="form-control" id="nombre_producto" required>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="descripcion_producto" class="form-label-1">Descripción</label>
+                  <textarea type="text" class="form-control" id="descripcion_producto" rows="3"  required></textarea>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="precio_producto" class="form-label-1">Precio</label>
+                  <input type="text" class="form-control" id="precio_producto" required>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="descu_producto" class="form-label-1"> % Descuento Suscriptor</label>
+                  <input type="text" class="form-control" id="descu_producto" required>
+                </div>
+                <div class="mb-3 fw-bold py-3">
+                  <label for="descu_oferta" class="form-label-1"> % Descuento por oferta</label>
+                  <input type="text" class="form-control " id="descu_oferta" required>
+                </div>
+                <div class="d-grid gap-2 d-md-block" style=" margin-left: 10px; padding: 50px;">
+                  <button class="btn btn-primary" type="button" style="margin-right: 30px;">Guardar</button>
+                  <button class="btn btn-primary" type="button" style="margin-right: 30px;">Nuevo</button>
+                  <button class="btn btn-primary" type="button" style="padding-left: 10px;">Eliminar</button>
+                </div>
+                
+              </div>
+              <!-- foto de juego-->
+              <div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 0; padding-left: 100px;">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="img/jueguito3.png" class="rounded float-end" alt="..." width="500" style="padding-right: 100px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <br>
+                      <div class="input-group" style="max-width: fit-content;">
+                        <input type="file" class="form-control">
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              
             </div>
-            <img src="img/jueguito3.png" class="rounded float-end" alt="..." width="500" style="padding-right: 100px;">
-            <div class="col-md-4 py-3">
-              <label for="validationDefault04" class="form-label-1">Categoria</label>
-              <select class="form-select" id="validationDefault04" required>
-                <option selected disabled value=""></option>
-                <option>Nintendo 64</option>
-                <option>Juego Xbox</option>
-                <option>PS4</option>
-              </select>
-            </div>
-            <div class="col-md-4 py-3">
-              <label for="validationDefault05" class="form-label-1">Nombre Producto</label>
-              <input type="text" class="form-control" id="validationDefault05" required>
-            </div>
-            <div class="col-md-4 py-3">
-              <label for="validationDefault03" class="form-label-1">Descripción</label>
-              <textarea type="text" class="form-control" id="validationDefault03" rows="3"  required></textarea>
-            </div>
-            <div class="col-md-4 py-3">
-              <label for="validationDefault05" class="form-label-1">Precio</label>
-              <input type="text" class="form-control" id="validationDefault05" required>
-            </div>
-            <div class="col-md-4 py-3">
-              <label for="validationDefault05" class="form-label-1"> % Descuento Suscriptor</label>
-              <input type="text" class="form-control" id="validationDefault05" required>
-            </div>
-            <div class="col-md-4 py-3">
-              <label for="validationDefault05" class="form-label-1"> % Descuento por oferta</label>
-              <input type="text" class="form-control " id="validationDefault05" required>
-            </div>
-          </div>
-          <div class="d-grid gap-2 d-md-block" style=" margin-left: 10px; padding: 50px;">
-            <button class="btn btn-primary" type="button" style="margin-right: 30px;">Guardar</button>
-            <button class="btn btn-primary" type="button" style="margin-right: 30px;">Nuevo</button>
-            <button class="btn btn-primary" type="button" style="padding-left: 10px;">Eliminar</button>
-          </div>
-
-          <section class="text-center" style="padding-left: 10px; " >
-            <table class=" table table-hover">
-              <thead>
-                <th scope="col"></th>
-                <th scope="col">ID</th>
-                <th scope="col" class="d-none d-lg-block d-lg-table-cell">Categoría</th>
-                <th scope="col">Nombre</th>
-                <th scope="col" class="text-center text-end">Descripción</th>
-                <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">Precio</th>
-                <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">% Oferta</th>
-                <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">% Dsc Suscriptor</th>
-                </th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">
-                    <div class="mb-3 form-check" >
-                      <input class="form-check-input" type="checkbox" value="" id="seleccion">
-                      <label class="form-check-label" for="seleccion">
-                  </td>
-                  <td scope="row">666</td>
-                  <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">PS4</td>
-                  <td scope="col">Yakuza 0</td>
-                  <td scope="col" class="text-end text-center"> Yakuza 0 es la sexta entrega 
-                    de la popular saga de acción 
-                    y aventura Yakuza a cargo...</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$24.990</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
-                  </td>
-                </tr>
-    
-                <tr>
-                  <td scope="row">
-                    <div class="mb-3 form-check" >
-                      <input class="form-check-input" type="checkbox" value="" id="seleccion">
-                      <label class="form-check-label" for="seleccion">
-                  </td>
-                  <td scope="row">14634</td>
-                  <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">Xbox</td>
-                  <td scope="col">Left 4 Dead 2</td>
-                  <td scope="col" class="text-center text-end">Ambientado en el apocalipsis 
-                    zombi...</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$10.000</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td scope="row">
-                    <div class="mb-3 form-check" >
-                      <input class="form-check-input" type="checkbox" value="" id="seleccion">
-                      <label class="form-check-label" for="seleccion">
-                  </td>
-                  <td scope="row">1564</td>
-                  <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">Nintendo 64</td>
-                  <td scope="col">Conker's bad fur day</td>
-                  <td scope="col" class="text-center text-end">La historia sigue a Conker, una ardilla
-                    roja codiciosa y bebedora que debe regresar
-                    a su casa con su novia Berri...</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$38.900</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
-                  <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          
-
-      </div>
+            <section class="text-center" style="padding-left: 10px; " >
+              <table class=" table table-hover">
+                <thead>
+                  <th scope="col"></th>
+                  <th scope="col">ID</th>
+                  <th scope="col" class="d-none d-lg-block d-lg-table-cell">Categoría</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col" class="text-center text-end">Descripción</th>
+                  <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">Precio</th>
+                  <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">% Oferta</th>
+                  <th scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">% Dsc Suscriptor</th>
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">
+                      <div class="mb-3 form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                        <label class="form-check-label" for="seleccion">
+                    </td>
+                    <td scope="row">666</td>
+                    <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">PS4</td>
+                    <td scope="col">Yakuza 0</td>
+                    <td scope="col" class="text-end text-center"> Yakuza 0 es la sexta entrega 
+                      de la popular saga de acción 
+                      y aventura Yakuza a cargo...</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$24.990</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
+                    </td>
+                  </tr>
       
+                  <tr>
+                    <td scope="row">
+                      <div class="mb-3 form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                        <label class="form-check-label" for="seleccion">
+                    </td>
+                    <td scope="row">14634</td>
+                    <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">Xbox</td>
+                    <td scope="col">Left 4 Dead 2</td>
+                    <td scope="col" class="text-center text-end">Ambientado en el apocalipsis 
+                      zombi...</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$10.000</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      <div class="mb-3 form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="seleccion">
+                        <label class="form-check-label" for="seleccion">
+                    </td>
+                    <td scope="row">1564</td>
+                    <td scope="col" class="text-end d-none d-lg-block d-lg-table-cell">Nintendo 64</td>
+                    <td scope="col">Conker's bad fur day</td>
+                    <td scope="col" class="text-center text-end">La historia sigue a Conker, una ardilla
+                      roja codiciosa y bebedora que debe regresar
+                      a su casa con su novia Berri...</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">$38.900</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">10%</td>
+                    <td scope="col" class="text-center text-end d-none d-lg-block d-lg-table-cell">5%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </form>
+      </section>
+      </div>
     </div>
-
+          
     <br><br>
     <div class="pt-5"></div>
 
