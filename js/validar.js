@@ -248,3 +248,53 @@ $(document).ready(function() {
     }
   });
 });
+
+//validar producto
+$(document).ready(function() {
+  $("#formulario-producto").validate({
+    rules: {
+      id_producto: {
+        required: true,
+        minlength: 1,
+      },
+
+      nombre_producto: {
+        required: true,
+         minlength: 2,
+      },
+
+      descripcion_producto: {
+       required: true,
+       minlength: 4,
+      },
+
+     precio_producto: {
+       required: true,
+       minlength: 4,
+      }
+
+
+
+    },
+    messages: {
+      id_producto: {
+        required: "El campo ID es obligatorio",
+      },
+      nombre_producto: {
+        required: "El nombre es un campo obligatorio",
+        minlength: "Mínimo 2 caracteres",
+      },
+      descripcion_producto: {
+        required: "El campo es obligatorio",
+        minlength: "Minimo 4 carateres",
+      },
+     precio_producto: {
+        required: "El campo es obligatorio",
+        minlength: "minimo 4 caracteres",
+      }
+
+    }
+  });
+});
+  
+  
