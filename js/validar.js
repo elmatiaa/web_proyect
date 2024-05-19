@@ -82,7 +82,10 @@ $("#formulario-registro").validate({
       required: true,
       equalTo: "#password",
     },
-  }, // --> Fin de reglas
+  }, // --> FIN DE REGLAS
+
+
+  
   messages: {
     rut: {
       required: "El rut es un campo obligatorio",
