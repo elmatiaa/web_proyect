@@ -280,6 +280,7 @@ $(document).ready(function() {
       id_producto: {
         required: "El campo ID es obligatorio",
       },
+
       nombre_producto: {
         required: "El nombre es un campo obligatorio",
         minlength: "Mínimo 2 caracteres",
@@ -288,13 +289,15 @@ $(document).ready(function() {
         required: "El campo es obligatorio",
         minlength: "Minimo 4 carateres",
       },
-     precio_producto: {
+      precio_producto: {
         required: "El campo es obligatorio",
         minlength: "minimo 4 caracteres",
-      }
-
+      }, 
+      validationDefault04: {
+            required: "Selecciona una categoria.",
+      },
+      
     }
   });
+   $("#formulario-producto").valid();
 });
-  
-  
