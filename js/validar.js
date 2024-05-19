@@ -82,6 +82,7 @@ $("#formulario-registro").validate({
       required: true,
       equalTo: "#password",
     },
+
   }, // --> FIN DE REGLAS
 
 
