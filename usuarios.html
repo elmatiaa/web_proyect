@@ -19,7 +19,7 @@
     <div class="container">
       <section >
         <div class="container py-4 pt-4">
-          <form class="row g-3 needs-validation" id="formulario-usuario" action="">
+          <form method="POST row g-3 needs-validation" id="formulario-usuario" action="">
             <div class="contanier-fluid bg-white py-4 pt-4" style="border-radius: 10px;">
               <div class="row">
                 <!-- campos del registro de usuario -->
@@ -27,7 +27,7 @@
                 <div class="col-sm-12 col-md-6" style="padding-left: 50px;">
                   <div class="mb-3 fw-bold">
                     <label for="identificador" class="for-label">ID</label>
-                    <input type="text" class="form-control" name="identificador" id="identiicador"  required>
+                    <input type="text" class="form-control" name="identificador" id="identiicador"  />
                   </div>
                   <div class="mb-3 fw-bold contanier-fluid text-center">
                     <form  >
@@ -40,19 +40,19 @@
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="rut" class="for-label">Rut</label>
-                    <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej: 123456789" value="">
+                    <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej: 123456789" value=""/>
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="nombres" class="for-label">Nombres</label>
-                    <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ej: Juan Andres" value="">
+                    <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ej: Juan Andres" value=""/>
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="Apellidos" class="for-label">Apellidos</label>
-                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ej: Perez Lopez" value="">
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ej: Perez Lopez" value=""/>
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="correo" class="for-label">Correo</label>
-                    <input type="text" class="form-control" id="correo" name="correo" placeholder="Ej: JuanP123@gmail.com" value="">
+                    <input type="text" class="form-control" id="correo" name="correo" placeholder="Ej: JuanP123@gmail.com" value=""/>
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="Direccion" class="for-label">Dirección</label>
@@ -71,7 +71,7 @@
                   </div>
                   <div class="mb-3 fw-bold">
                     <label for="generador" class="for-label">Contraseña</label>
-                    <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="">
+                    <input type="password" class="form-control" id="password" name="password" placeholder=""/>
                     <div class="py-4 mb-3 fw-bold contanier-fluid text-center">
                       <button type="submit" class="btn btn-primary boton-pag-pass ">Generar Contraseña</button>
                     </div>
