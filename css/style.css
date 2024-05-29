@@ -159,3 +159,7 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
 }
+
+.error {
+  color: red;
+}

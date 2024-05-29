@@ -1,34 +1,43 @@
 $(document).ready(function() {
-  // -- VERIFICACION RUT
-  $.validator.addMethod("rutChileno", function(value, element) {
-    // Eliminar puntos y guión del RUT
-    value = value.replace(/[.-]/g, "");
-    // Validar que el RUT tenga 8 o 9 dígitos
-    if (value.length < 8 || value.length > 9) {
-      return false;
-    }
-    // Validar que el último dígito sea un número o una 'K'
-    var validChars = "0123456789K";
-    var lastChar = value.charAt(value.length - 1).toUpperCase();
-    if (validChars.indexOf(lastChar) == -1) {
-      return false;
-    }
-    // Calcular el dígito verificador
-    var rut = parseInt(value.slice(0, -1), 10);
-    var factor = 2;
-    var sum = 0;
-    var digit;
-    while (rut > 0) {
-      digit = rut % 10;
-      sum += digit * factor;
-      rut = Math.floor(rut / 10);
-      factor = factor === 7 ? 2 : factor + 1;
-    }
-    var dv = 11 - (sum % 11);
-    dv = dv === 11 ? "0" : dv === 10 ? "K" : dv.toString();
-    // Validar que el dígito verificador sea correcto
-    return dv === lastChar;
-  }, "Por favor ingrese un RUT válido."); 
+    // Agregar método de validación para RUT chileno
+    $.validator.addMethod("rutChileno", function(value, element) {
+
+      // Validar que el RUT tenga el formato correcto (8 o 9 dígitos + guión + dígito verificador)
+      var rutPattern = /^\d{7,8}-[\dK]$/;
+      if (!rutPattern.test(value)) {
+          return false;
+      }
+  
+      // Validar el dígito verificador
+      var rutSinGuion = value.replace("-", "");
+      var rut = rutSinGuion.slice(0, -1);
+      var dv = rutSinGuion.slice(-1);
+      var factor = 2;
+      var sum = 0;
+      for (var i = rut.length - 1; i >= 0; i--) {
+          sum += parseInt(rut.charAt(i)) * factor;
+          factor = factor === 7 ? 2 : factor + 1;
+      }
+      var dvCalculado = 11 - (sum % 11);
+      dvCalculado = dvCalculado === 11 ? "0" : dvCalculado === 10 ? "K" : dvCalculado.toString();
+  
+      return dv === dvCalculado;
+    }, "El RUT no es válido (escriba sin puntos y con guión)");
+  
+    // Agregar método de validación para correo
+    $.validator.addMethod("emailCompleto", function(value, element) {
+  
+      // Expresión regular para validar correo electrónico
+      var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z\-0-9]{2,}))$/;
+  
+      // Validar correo electrónico con la expresión regular
+      return regex.test(value);
+  
+    }, 'El formato del correo no es válido');
+    
+    document.getElementById('rut').addEventListener('keyup', function(e) {
+      e.target.value = e.target.value.toUpperCase();
+    });
 
   //---CORREO ELECTRONICO
   $.validator.addMethod("emailCompleto", function(value, element) {
@@ -62,15 +71,6 @@ $(document).ready(function() {
   }, "Please select one option");
 
 
-  // $.validator.addMethod("validateCategory", function(value, element) {
-  //   return value !== 'Seleccione categoria';
-  // });
-
-  // // Agregar reglas de validación personalizadas para el nombre
-  // $.validator.addMethod("validateName", function(value, element) {
-  //   return value !== 'Seleccione Nombre';
-  // });
-
   $("#formulario-registro").validate({
     rules: {
       rut: {
@@ -98,9 +98,12 @@ $(document).ready(function() {
       password: {
         required: true,
         minlength: 5,
+        maxlength: 15,
       },
       password2: {
         required: true,
+        minlength: 5,
+        maxlength: 15,
         equalTo: "#password",
       },
     }, // --> FIN DE REGLAS
@@ -129,12 +132,15 @@ $(document).ready(function() {
         minlength: "Mínimo 8 caracteres",
       },
       password: {
-        required: "La contraseña es una campo obligatorio",
-        minlength: "Mínimo 5 caracteres",
+        required: "La contraseña es un campo requerido",
+        minlength: "La contraseña debe tener un mínimo de 5 caracteres",
+        maxlength: "La contraseña debe tener un máximo de 15 caracteres",
       },
       password2: {
-        required: "Repita la contraseña anterior",
-        equalTo: "Debe ser igual al campo contraseña",
+        required: "Repetir contraseña es un campo requerido",
+        minlength: "Repetir contraseña debe tener un mínimo de 5 caracteres",
+        maxlength: "Repetir contraseña debe tener un máximo de 15 caracteres",
+        equalTo: "Debe repetir la contraseña escrita anteriormente",
       },
     },
   });
@@ -149,6 +155,7 @@ $(document).ready(function() {
       contrasena: {
         required: true,
         minlength: 5,
+        maxlength: 15,
       }
     },
     messages: {
@@ -158,7 +165,8 @@ $(document).ready(function() {
       },
       contrasena: {
         required: "La contraseña es una campo obligatorio",
-        minlength: "Contraseña no válida"
+        minlength: "Minimo 5 caracteres",
+        maxlength: "La contraseña debe tener un máximo de 15 caracteres",
       },
     },
   });
@@ -195,10 +203,6 @@ $(document).ready(function() {
         required: true,
         minlength: 8,
       },
-      password: {
-        required: true,
-        minlength: 5,
-      },
     },
     messages: {
       identificador: {
@@ -230,10 +234,6 @@ $(document).ready(function() {
         required: "La dirección es un campo obligatorio",
         minlength: "Mínimo 8 caracteres",
       },
-      password: {
-        required: "La contraseña es una campo obligatorio",
-        minlength: "Mínimo 5 caracteres",
-      },
     },
   });
 
@@ -258,18 +258,23 @@ $(document).ready(function() {
       },
       precio_producto: {
        required: true,
-       minlength: 4,
-       soloNumeros: true,
+        min:0,
+        number:true,
+
       },
       descu_producto: {
         required: true,
-        minlength: 1,
-        soloNumeros: true,
+        min: 0,
+        max: 100,
+        number:true,
+
       },
       descu_oferta: {
         required: true,
-        minlength: 1,
-        soloNumeros: true,
+        min: 0,
+        max: 100,
+        number:true,
+
       },
     },
     messages: {
@@ -309,32 +314,34 @@ $(document).ready(function() {
 
   $("#formulario-bodega").validate({
     rules:{
+      validationDefault05: {
+        required: true,
+        categoriaSeleccionada: true,
+      },
+      validationDefault06: {
+        required: true,
+        categoriaSeleccionada: true,
+      },
       cantidad:{
         required: true,
         minlength: 1,
         soloNumeros: true,
       },
-      categbodega: {
-        required: true,
-        validateCategory: true,
-      },
-      nombrebodega: {
-        required: true,
-        validateName: true,
-      },
     },
     messages:{
+      validationDefault05: {
+        required: "El campo categoría es obligatorio",
+        categoriaSeleccionada: "Se debe seleccionar una categoría",
+      }, 
+      validationDefault06: {
+        required: "El campo nombre es obligatorio",
+        categoriaSeleccionada: "Se debe seleccionar un nombre",
+      }, 
       cantidad:{
         required: "La cantidad es un campo obligatorio",
         minlength: "minimo 1 caracter",
         soloNumeros: "El campo solo puede tener numeros",
       },
-    categbodega: {
-      required: "Por favor seleccione una categoría."
-    },
-    nombrebodega: {
-      required: "Por favor seleccione un nombre."
-    },
   },
 });
 
