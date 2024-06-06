@@ -163,3 +163,18 @@ input[type="text"], input[type="correo"], input[type="password"], textarea{
 .error {
   color: red;
 }
+
+.detalle-boleta {
+  display: flex;
+  align-items: center;
+}
+
+.iconos-check-espera {
+  margin-left: auto;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.iconos-check-espera img {
+  margin-bottom: 10px;
+}
